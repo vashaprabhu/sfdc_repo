@@ -80,13 +80,17 @@ public class SFDC_Leads {
 			login_password.sendKeys(passWord);	
 			WebElement login_btn = SalesForce_Utilities.driver.findElement(By.xpath("//*[@id='Login']"));
 			login_btn.click();
+			Thread.sleep(4000);
 
 		}catch(Exception e) {
 			System.out.println("Exception while reading properties file");
 		}
-		SalesForce_Utilities.waiting(leads);
-		leads.click();   
-		System.out.println(leadhomepage.isDisplayed()); 
+		Thread.sleep(2000);
+		
+		WebElement leads1 = SalesForce_Utilities.driver.findElement(By.xpath("//li[@id='Lead_Tab']"));
+		SalesForce_Utilities.waiting(leads1);
+		leads1.click();  
+//		System.out.println(leadhomepage.isDisplayed()); 
 //		closead.click();  
 		WebElement gobtn = SalesForce_Utilities.driver.findElement(By.xpath("//input[@value=' Go! ']"));
 		gobtn.click();

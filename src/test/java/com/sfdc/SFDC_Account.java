@@ -246,14 +246,16 @@ public class SFDC_Account {
 			
 			reponame.sendKeys(rname); 
 			WebElement repouniname  = SalesForce_Utilities.driver.findElement(By.xpath("//input[@name='reportDevName']"));
-			repouniname.sendKeys(runame);    
-			WebElement reposav  = SalesForce_Utilities.driver.findElement(By.xpath("//td[@id='ext-gen315']"));
+			repouniname.click();   
+			WebElement reposav  = SalesForce_Utilities.driver.findElement(By.id("dlgSaveAndRun"));
+			Thread.sleep(2000);
+			SalesForce_Utilities.waiting(reposav);
 			reposav.click();    
-			WebElement reporun  = SalesForce_Utilities.driver.findElement(By.xpath("//button[@id='ext-gen63']"));
-			reporun.click(); 
-			WebElement repopage  = SalesForce_Utilities.driver.findElement(By.xpath("//div[@class='outerNoSidebar']"));
-			System.out.println(repopage.isDisplayed());  
-			
+//			WebElement reporun  = SalesForce_Utilities.driver.findElement(By.xpath("//button[@id='ext-gen63']"));
+//			reporun.click(); 
+//			WebElement repopage  = SalesForce_Utilities.driver.findElement(By.xpath("//div[@class='outerNoSidebar']"));
+//			System.out.println(repopage.isDisplayed());  
+//			
 			
 		}catch(Exception e) {
 			System.out.println("Exception while reading properties file  " +e);

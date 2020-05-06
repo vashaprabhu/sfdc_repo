@@ -12,7 +12,7 @@ public class SalesForce {
 //		SalesForce_Utilities.invalidLogin();
 		
 //		SFDC_UsrMenu.usrdrpdwn();
-		SFDC_UsrMenu.myProfile();
+//		SFDC_UsrMenu.myProfile();
 //		SFDC_UsrMenu.mysetting();
 //		SFDC_UsrMenu.devconsole();
 //		SFDC_UsrMenu.logout();
@@ -30,7 +30,7 @@ public class SalesForce {
 		
 //		SFDC_Leads.leadcheck();
 //		SFDC_Leads.validateview();
-//		SFDC_Leads.gofunctionality();
+		SFDC_Leads.gofunctionality();
 //		SFDC_Leads.todaylead();
 //		SFDC_Leads.newbutton();
 		
